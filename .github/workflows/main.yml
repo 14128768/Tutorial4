@@ -1,0 +1,13 @@
+name: Maven Build
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    # Run tests
+    - name: Run tests
+      run: mvn clean test
